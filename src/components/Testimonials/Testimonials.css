@@ -1,0 +1,189 @@
+.testimonials {
+  margin: 80px auto;
+  padding: 0 80px;
+  position: relative;
+  max-width: 1200px;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 200%;
+  transition: transform 0.4s ease;
+}
+
+.slider ul li {
+  list-style: none;
+  width: 50%;
+  padding: 20px;
+}
+
+.slide {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #212ea0;
+  object-fit: cover;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #212ea0;
+  font-weight: 600;
+}
+
+.user-info span {
+  font-size: 15px;
+  color: #555;
+}
+
+.slide p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Arrows */
+.next-btn,
+.back-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #212ea0;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-btn {
+  right: -30px;
+}
+
+.back-btn {
+  left: -30px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 0 60px;
+  }
+  
+  .next-btn, .back-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 0 40px;
+  }
+  
+  .slider ul li {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Mobile Arrow Positioning */
+  .next-btn, .back-btn {
+    top: auto;
+    bottom: -60px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    background-color: #212ea0dd;
+  }
+  .next-btn {
+    right: 40px;
+    left: auto;
+  }
+  .back-btn {
+    left: 40px;
+    right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials {
+    padding: 0 20px;
+    margin: 60px auto;
+  }
+
+  .slide {
+    padding: 20px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .user-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-info h3 {
+    font-size: 16px;
+  }
+
+  .user-info span {
+    font-size: 13px;
+  }
+
+  .slide p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Smaller arrows for very small screens */
+  .next-btn, .back-btn {
+    width: 38px;
+    height: 38px;
+    bottom: -50px;
+  }
+  .next-btn {
+    right: 20px;
+  }
+  .back-btn {
+    left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .next-btn, .back-btn {
+    width: 36px;
+    height: 36px;
+    bottom: -45px;
+  }
+}
